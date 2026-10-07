@@ -1,16 +1,23 @@
-# riyoMar.github.io
+# riyoMar | Personal Portfolio
 
-A personal portfolio built with Vue 3 and Vite, deployed to GitHub Pages with GitHub Actions.
+A personal portfolio showcasing selected software projects and interests across Linux, Java, and web development. Built with Vue 3 and Vite, with a GitHub Actions workflow for GitHub Pages.
 
-## Run locally
+**Preview:** [Open the portfolio](http://localhost:5173/) · **GitHub:** [github.com/riyoMar](https://github.com/riyoMar)
 
-```sh
-npm ci
-npm run dev
-```
+## Overview
 
-## Deploy
+The site features selected repositories, a short developer profile, responsive navigation, and a light and dark theme. Project details and links are maintained in the Vue application; the profile image is served from GitHub.
 
-Every push to `main` builds the site and deploys it to GitHub Pages. In the repository's **Settings > Pages**, set the build and deployment source to **GitHub Actions**. You can also start a deployment from the **Actions** tab with **Run workflow**.
+### Featured projects
 
-After the first successful deployment, the site will be available at [https://riyoMar.github.io](https://riyoMar.github.io).
+- [flex-qdisc](https://github.com/riyoMar/flex-qdisc): Linux networking and traffic control.
+- [MTVTracker](https://github.com/riyoMar/MTVTracker): A Java movie and television tracking project.
+- [complex_website](https://github.com/riyoMar/complex_website): A Laravel and Vue web project.
+
+## Technology
+
+- Vue 3
+- Vite
+- Lucide icons
+- GitHub Pages and GitHub Actions
+
