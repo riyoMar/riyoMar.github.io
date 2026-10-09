@@ -42,7 +42,7 @@ const projects = [
 ]
 
 const open = ref(false)
-const dark = ref(false)
+const dark = ref(window.matchMedia('(prefers-color-scheme: dark)').matches)
 
 function closeMenu() {
   open.value = false
@@ -50,7 +50,7 @@ function closeMenu() {
 </script>
 
 <template>
-  <div class="site-shell" :class="{ 'theme-dark': dark }">
+  <div class="site-shell" :class="{ 'theme-dark': dark, 'theme-light': !dark }">
     <header class="topbar">
       <a class="wordmark" href="#home" aria-label="riyoMar home" @click="closeMenu">
         <span class="wordmark-dot"></span>

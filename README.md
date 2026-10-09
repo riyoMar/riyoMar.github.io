@@ -1,23 +1,32 @@
-# riyoMar | Personal Portfolio
+# riyoMar — Developer Portfolio
 
-A personal portfolio showcasing selected software projects and interests across Linux, Java, and web development. Built with Vue 3 and Vite, with a GitHub Actions workflow for GitHub Pages.
+**Curious by default. Building useful things along the way.**
 
-**Preview:** [Open the portfolio](http://localhost:5173/) · **GitHub:** [github.com/riyoMar](https://github.com/riyoMar)
+The personal portfolio of riyoMar: a place to explore selected work across Linux, Java, and the web. It brings together systems-level curiosity, practical software projects, and a clean, considered interface.
 
-## Overview
+**[Explore the live portfolio](https://riyomar.github.io)** · [GitHub profile](https://github.com/riyoMar)
 
-The site features selected repositories, a short developer profile, responsive navigation, and a light and dark theme. Project details and links are maintained in the Vue application; the profile image is served from GitHub.
+## Selected work
 
-### Featured projects
+### [flex-qdisc](https://github.com/riyoMar/flex-qdisc)
+An exploration of Linux queueing disciplines and network traffic control.
 
-- [flex-qdisc](https://github.com/riyoMar/flex-qdisc): Linux networking and traffic control.
-- [MTVTracker](https://github.com/riyoMar/MTVTracker): A Java movie and television tracking project.
-- [complex_website](https://github.com/riyoMar/complex_website): A Laravel and Vue web project.
+### [MTVTracker](https://github.com/riyoMar/MTVTracker)
+A Java project for keeping track of movies and television.
 
-## Technology
+### [complex_website](https://github.com/riyoMar/complex_website)
+An evolving web project built with Laravel and Vue.
 
-- Vue 3
-- Vite
-- Lucide icons
-- GitHub Pages and GitHub Actions
+## About this portfolio
 
+Designed as a focused introduction rather than a list of links, the site pairs a restrained visual identity with a clear path from selected work to background and contact. It supports responsive layouts and follows the device's light or dark appearance by default, with an in-page toggle for a manual choice.
+
+## Built with
+
+Vue 3 · Vite · Lucide · CSS · GitHub Pages
+
+---
+
+**Open to interesting ideas and thoughtful collaboration.**
+
+[Connect on GitHub](https://github.com/riyoMar)

@@ -87,6 +87,28 @@ a:focus:not(:focus-visible) {
   --acid: #d6f36a;
 }
 
+.site-shell.theme-light {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    background: #20221e;
+  }
+
+  .site-shell:not(.theme-light) {
+    color-scheme: dark;
+    --paper: #20221e;
+    --surface: #292b26;
+    --ink: #f4f2e9;
+    --muted: #a4a49a;
+    --subtle: #85857b;
+    --line: #3b3d36;
+    --acid: #d6f36a;
+  }
+}
+
 .section-wrap,
 .topbar {
   width: min(1140px, calc(100% - 96px));
