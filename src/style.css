@@ -143,6 +143,7 @@ a:focus:not(:focus-visible) {
 }
 
 .wordmark-light {
+  margin-left: 0.22em;
   color: var(--muted);
   font-weight: 500;
 }

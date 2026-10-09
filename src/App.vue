@@ -54,7 +54,7 @@ function closeMenu() {
     <header class="topbar">
       <a class="wordmark" href="#home" aria-label="Riyo Maryadi home" @click="closeMenu">
         <span class="wordmark-dot"></span>
-        Riyo <span class="wordmark-light">Maryadi</span><span class="wordmark-period">.</span>
+        Riyo<span class="wordmark-light">Maryadi</span>
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
@@ -231,7 +231,7 @@ function closeMenu() {
     </main>
 
     <footer class="footer section-wrap">
-      <a class="wordmark footer-mark" href="#home" aria-label="Back to top">Riyo <span class="wordmark-light">Maryadi</span><span class="wordmark-period">.</span></a>
+      <a class="wordmark footer-mark" href="#home" aria-label="Back to top">Riyo<span class="wordmark-light">Maryadi</span></a>
       <span class="footer-note">THOUGHTFULLY MADE, ONE IDEA AT A TIME.</span>
       <a class="footer-github" href="https://github.com/riyoMar" target="_blank" rel="noreferrer" aria-label="Visit Riyo Maryadi on GitHub">
         <ArrowUpRight :size="16" /><span>GitHub</span>
