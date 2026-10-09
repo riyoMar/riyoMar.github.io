@@ -1,8 +1,8 @@
-# riyoMar — Developer Portfolio
+# Riyo Maryadi — Developer Portfolio
 
 **Curious by default. Building useful things along the way.**
 
-The personal portfolio of riyoMar: a place to explore selected work across Linux, Java, and the web. It brings together systems-level curiosity, practical software projects, and a clean, considered interface.
+The personal portfolio of Riyo Maryadi: a place to explore selected work across Linux, Java, and the web. It brings together systems-level curiosity, practical software projects, and a clean, considered interface.
 
 **[Explore the live portfolio](https://riyomar.github.io)** · [GitHub profile](https://github.com/riyoMar)
 

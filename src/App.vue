@@ -52,9 +52,9 @@ function closeMenu() {
 <template>
   <div class="site-shell" :class="{ 'theme-dark': dark, 'theme-light': !dark }">
     <header class="topbar">
-      <a class="wordmark" href="#home" aria-label="riyoMar home" @click="closeMenu">
+      <a class="wordmark" href="#home" aria-label="Riyo Maryadi home" @click="closeMenu">
         <span class="wordmark-dot"></span>
-        riyo<span class="wordmark-light">Mar</span><span class="wordmark-period">.</span>
+        Riyo <span class="wordmark-light">Maryadi</span><span class="wordmark-period">.</span>
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
@@ -110,14 +110,14 @@ function closeMenu() {
           </div>
         </div>
 
-        <div class="hero-art" aria-label="Portrait of riyoMar">
+        <div class="hero-art" aria-label="Portrait of Riyo Maryadi">
           <div class="art-topline"><span>INDEPENDENTLY CURIOUS</span><span>EST. 2023</span></div>
           <div class="portrait-frame">
             <div class="portrait-backdrop"></div>
             <img
               class="portrait"
               src="https://github.com/riyoMar.png?size=640"
-              alt="riyoMar's GitHub profile avatar"
+              alt="Riyo Maryadi's GitHub profile avatar"
               fetchpriority="high"
             />
             <span class="orbit orbit-one"></span>
@@ -207,7 +207,7 @@ function closeMenu() {
             <h2>Better questions.<br />Better <span class="heading-accent">software.</span></h2>
           </div>
           <div class="about-content">
-            <p class="about-lead">I’m riyoMar. I enjoy the in-between part of making things: the experimenting, the rabbit holes, and the satisfying moment it finally clicks.</p>
+            <p class="about-lead">I’m Riyo Maryadi. I enjoy the in-between part of making things: the experimenting, the rabbit holes, and the satisfying moment it finally clicks.</p>
             <p class="about-secondary">Right now, that curiosity takes me through Linux, Java, and the web. The projects here are snapshots of what I’m learning and what I’m building; there’s always something new around the corner.</p>
             <div class="interest-list" aria-label="Technologies and interests">
               <span>Linux</span><span>Java</span><span>Vue</span><span>Laravel</span><span>Open source</span>
@@ -231,9 +231,9 @@ function closeMenu() {
     </main>
 
     <footer class="footer section-wrap">
-      <a class="wordmark footer-mark" href="#home" aria-label="Back to top">riyo<span class="wordmark-light">Mar</span><span class="wordmark-period">.</span></a>
+      <a class="wordmark footer-mark" href="#home" aria-label="Back to top">Riyo <span class="wordmark-light">Maryadi</span><span class="wordmark-period">.</span></a>
       <span class="footer-note">THOUGHTFULLY MADE, ONE IDEA AT A TIME.</span>
-      <a class="footer-github" href="https://github.com/riyoMar" target="_blank" rel="noreferrer" aria-label="Visit riyoMar on GitHub">
+      <a class="footer-github" href="https://github.com/riyoMar" target="_blank" rel="noreferrer" aria-label="Visit Riyo Maryadi on GitHub">
         <ArrowUpRight :size="16" /><span>GitHub</span>
       </a>
       <a class="back-to-top" href="#home" aria-label="Back to top"><ArrowUpRight :size="17" /></a>
