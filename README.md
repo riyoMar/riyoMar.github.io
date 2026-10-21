@@ -1,32 +1,29 @@
-# Riyo Maryadi — Developer Portfolio
+# Riyo Maryadi
 
-**Curious by default. Building useful things along the way.**
+### Software Developer · Data Science · Web · Networking · Mobile
 
-The personal portfolio of Riyo Maryadi: a place to explore selected work across Linux, Java, and the web. It brings together systems-level curiosity, practical software projects, and a clean, considered interface.
+I build practical software across machine learning, modern web applications, network performance, and mobile experiences. My portfolio brings together selected projects that demonstrate a hands-on approach to solving problems and learning across technologies.
 
-**[Explore the live portfolio](https://riyomar.github.io)** · [GitHub profile](https://github.com/riyoMar)
+[Portfolio](https://riyomar.github.io) · [GitHub](https://github.com/riyoMar)
 
 ## Selected work
 
-### [flex-qdisc](https://github.com/riyoMar/flex-qdisc)
-An exploration of Linux queueing disciplines and network traffic control.
+### Data Scientist & AI
+[Heart Disease Risk Classification](https://heart-disease-risk-classification.streamlit.app/) — an interactive machine-learning application for heart disease risk classification.
 
-### [MTVTracker](https://github.com/riyoMar/MTVTracker)
-A Java project for keeping track of movies and television.
+[Source repository](https://github.com/riyoMar/ml-heart-attack-classification) · [Data Scientist & AI certification](https://riyomar.github.io/certifications/data-scientist-ai.pdf)
 
-### [complex_website](https://github.com/riyoMar/complex_website)
-An evolving web project built with Laravel and Vue.
+### Full-Stack Developer
+- [Vue — complex_website](https://github.com/riyoMar/complex_website)
+- [React — react-profile](https://github.com/riyoMar/react-profile)
+- [Angular — angular-profile](https://github.com/riyoMar/angular-profile)
 
-## About this portfolio
+### Network Engineer
+[flex-qdisc](https://github.com/riyoMar/flex-qdisc) — an OpenWrt package for flexible queue management, with a focus on mitigating bufferbloat and improving responsiveness under network load.
 
-Designed as a focused introduction rather than a list of links, the site pairs a restrained visual identity with a clear path from selected work to background and contact. It supports responsive layouts and follows the device's light or dark appearance by default, with an in-page toggle for a manual choice.
+### Mobile Developer
+[MTVTracker](https://github.com/riyoMar/MTVTracker) — a Java-based project for tracking movies and television.
 
-## Built with
+## Profile
 
-Vue 3 · Vite · Lucide · CSS · GitHub Pages
-
----
-
-**Open to interesting ideas and thoughtful collaboration.**
-
-[Connect on GitHub](https://github.com/riyoMar)
+I’m interested in opportunities where thoughtful engineering, curiosity, and a willingness to learn can make a meaningful contribution. My work spans Python and machine learning, Vue/React/Angular, OpenWrt and Linux networking, and Java.

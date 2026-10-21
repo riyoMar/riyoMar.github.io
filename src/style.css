@@ -582,6 +582,42 @@ a:focus:not(:focus-visible) {
   line-height: 1.7;
 }
 
+.data-chart {
+  position: absolute;
+  right: 16%;
+  bottom: 22%;
+  left: 16%;
+  display: flex;
+  height: 43%;
+  align-items: end;
+  justify-content: space-between;
+  padding-inline: 7%;
+  border-bottom: 1px solid rgb(83 100 59 / 55%);
+  background: repeating-linear-gradient(to bottom, transparent 0 24%, rgb(83 100 59 / 15%) 24% 25%);
+}
+
+.data-chart i {
+  width: 8%;
+  height: 42%;
+  background: #7e9651;
+}
+
+.data-chart i:nth-child(2) { height: 68%; }
+.data-chart i:nth-child(3) { height: 54%; }
+.data-chart i:nth-child(4) { height: 86%; }
+.data-chart i:nth-child(5) { height: 63%; }
+.data-chart i:nth-child(6) { height: 76%; }
+.data-chart i:nth-child(7) { height: 48%; }
+
+.data-chart-label {
+  position: absolute;
+  bottom: 8%;
+  left: 17px;
+  font-family: var(--mono);
+  font-size: 8px;
+  line-height: 1.6;
+}
+
 .network-map {
   position: absolute;
   inset: 0;
@@ -791,6 +827,95 @@ a:focus:not(:focus-visible) {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.65;
+}
+
+.certificate-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 0;
+  border: 0;
+  color: var(--ink);
+  background: transparent;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.certificate-trigger:hover,
+.certificate-pdf-link:hover {
+  color: #748a34;
+}
+
+.certificate-dialog {
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  margin: auto;
+  padding: 27px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: 0 20px 80px rgb(0 0 0 / 24%);
+}
+
+.certificate-dialog::backdrop {
+  background: rgb(16 18 14 / 66%);
+  backdrop-filter: blur(3px);
+}
+
+.certificate-dialog-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.certificate-dialog-header .eyebrow {
+  margin: 0 0 10px;
+}
+
+.certificate-dialog-header h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(26px, 6vw, 36px);
+  line-height: 1.1;
+}
+
+.certificate-dialog .icon-button {
+  flex: 0 0 auto;
+}
+
+.certificate-description {
+  margin: 23px 0 20px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.certificate-description code {
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.9em;
+  overflow-wrap: anywhere;
+}
+
+.certificate-viewer {
+  display: block;
+  width: 100%;
+  height: min(55vh, 520px);
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.certificate-pdf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .project-meta {
@@ -1071,10 +1196,6 @@ a:focus:not(:focus-visible) {
     row-gap: 27px;
   }
 
-  .project-card:last-child {
-    width: calc(50% - 9px);
-  }
-
   .tracker-big-type {
     font-size: 67px;
   }
@@ -1296,10 +1417,6 @@ a:focus:not(:focus-visible) {
   .project-list {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-
-  .project-card:last-child {
-    width: 100%;
   }
 
   .project-art {

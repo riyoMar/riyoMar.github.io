@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from 'vue'
-import { ArrowDown, ArrowRight, ArrowUpRight, Menu, Moon, Sun, X } from '@lucide/vue'
+import { onMounted, ref } from 'vue'
+import { ArrowDown, ArrowRight, ArrowUpRight, FileText, Menu, Moon, Sun, X } from '@lucide/vue'
 
 const navigation = [
   { label: 'Work', href: '#work' },
@@ -11,41 +11,85 @@ const navigation = [
 const projects = [
   {
     number: '01',
+    name: 'ml-heart-attack-classification',
+    category: 'DATA SCIENTIST & AI',
+    description: 'Applying machine learning to health data to classify heart-attack risk and communicate insights from the model.',
+    language: 'Python',
+    url: 'https://heart-disease-risk-classification.streamlit.app/',
+    theme: 'project-lime',
+    visual: 'data',
+    certification: true,
+  },
+  {
+    number: '02',
+    name: 'complex_website',
+    category: 'FULL-STACK DEVELOPER · VUE',
+    description: 'A full-stack web project built with Laravel and Vue, connecting a responsive interface with application logic.',
+    language: 'Vue',
+    url: 'https://github.com/riyoMar/complex_website',
+    theme: 'project-blue',
+    visual: 'website',
+  },
+  {
+    number: '03',
+    name: 'react-profile',
+    category: 'FULL-STACK DEVELOPER · REACT',
+    description: 'A React portfolio project focused on reusable UI, clear content hierarchy, and a polished responsive experience.',
+    language: 'React',
+    url: 'https://github.com/riyoMar/react-profile',
+    theme: 'project-pink',
+    visual: 'website',
+  },
+  {
+    number: '04',
+    name: 'angular-profile',
+    category: 'FULL-STACK DEVELOPER · ANGULAR',
+    description: 'An Angular portfolio project showcasing component-driven development and a considered, responsive interface.',
+    language: 'Angular',
+    url: 'https://github.com/riyoMar/angular-profile',
+    theme: 'project-blue',
+    visual: 'website',
+  },
+  {
+    number: '05',
     name: 'flex-qdisc',
-    category: 'SYSTEMS · LINUX',
-    description: 'Exploring queueing disciplines and traffic control in the Linux networking stack.',
+    category: 'NETWORK ENGINEER · OPENWRT',
+    description: 'An OpenWrt package for flexible queue management, designed to help mitigate bufferbloat and improve latency under load.',
     language: 'Shell',
     url: 'https://github.com/riyoMar/flex-qdisc',
     theme: 'project-lime',
     visual: 'qdisc',
   },
   {
-    number: '02',
+    number: '06',
     name: 'MTVTracker',
-    category: 'JAVA · PERSONAL PROJECT',
-    description: 'A Java project for keeping track of movies and TV.',
+    category: 'MOBILE DEVELOPER · JAVA',
+    description: 'A media-tracking project for organizing movies and television, with a focus on a practical, user-friendly experience.',
     language: 'Java',
     url: 'https://github.com/riyoMar/MTVTracker',
     theme: 'project-pink',
     visual: 'tracker',
   },
-  {
-    number: '03',
-    name: 'complex_website',
-    category: 'WEB · LARAVEL + VUE',
-    description: 'An evolving Laravel and Vue website. A sandbox for figuring out what works.',
-    language: 'Blade',
-    url: 'https://github.com/riyoMar/complex_website',
-    theme: 'project-blue',
-    visual: 'website',
-  },
 ]
 
 const open = ref(false)
-const dark = ref(window.matchMedia('(prefers-color-scheme: dark)').matches)
+const dark = ref(false)
+const certificateDialog = ref(null)
+
+onMounted(() => {
+  dark.value = window.matchMedia('(prefers-color-scheme: dark)').matches
+})
 
 function closeMenu() {
   open.value = false
+}
+
+function openCertificate() {
+  certificateDialog.value?.showModal()
+}
+
+function closeCertificate() {
+  certificateDialog.value?.close()
 }
 </script>
 
@@ -100,10 +144,10 @@ function closeMenu() {
     <main>
       <section id="home" class="hero section-wrap">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span> A developer's corner of the internet</p>
+          <p class="eyebrow"><span class="status-dot"></span> DEVELOPER · OPEN TO OPPORTUNITIES</p>
           <h1>Curious<br />by <span class="heading-accent">default.</span></h1>
           <div class="hero-lower">
-            <p class="hero-description">I like figuring out how things work and building something useful along the way.</p>
+            <p class="hero-description">I build practical software across data science, web development, networking, and mobile.</p>
             <a class="round-link" href="#work" aria-label="See selected work">
               <ArrowDown :size="21" />
             </a>
@@ -141,8 +185,8 @@ function closeMenu() {
       <section id="work" class="work-section section-wrap">
         <div class="section-heading">
           <div>
-            <p class="eyebrow section-kicker">A FEW THINGS I'VE BEEN MAKING</p>
-            <h2>Made with<br />curiosity<span class="heading-accent">.</span></h2>
+            <p class="eyebrow section-kicker">PROJECTS ACROSS DATA, WEB, NETWORKING &amp; MOBILE</p>
+            <h2>Selected<br />work<span class="heading-accent">.</span></h2>
           </div>
           <a class="text-link all-projects-link" href="https://github.com/riyoMar?tab=repositories" target="_blank" rel="noreferrer">
             The rest of GitHub <ArrowUpRight :size="16" />
@@ -167,6 +211,14 @@ function closeMenu() {
                 </span>
                 <span class="art-number">01</span>
               </template>
+              <template v-else-if="project.visual === 'data'">
+                <span class="art-label">MODEL INSIGHTS<br />HEALTH DATA</span>
+                <span class="data-chart" aria-hidden="true">
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </span>
+                <span class="data-chart-label">CLASSIFICATION<br />01 / 06</span>
+                <span class="art-number">01</span>
+              </template>
               <template v-else-if="project.visual === 'tracker'">
                 <span class="tracker-orbit tracker-orbit-one"></span>
                 <span class="tracker-orbit tracker-orbit-two"></span>
@@ -188,6 +240,15 @@ function closeMenu() {
                 <span class="project-category">{{ project.category }}</span>
                 <h3>{{ project.name }}</h3>
                 <p class="project-description">{{ project.description }}</p>
+                <button
+                  v-if="project.certification"
+                  class="certificate-trigger"
+                  type="button"
+                  @click="openCertificate"
+                >
+                  <FileText :size="14" />
+                  View Data Scientist &amp; AI certification
+                </button>
               </div>
               <div class="project-meta">
                 <span class="language-tag"><span class="language-dot" :class="`language-${project.language.toLowerCase()}`"></span>{{ project.language }}</span>
@@ -200,6 +261,34 @@ function closeMenu() {
         </div>
       </section>
 
+      <dialog ref="certificateDialog" class="certificate-dialog" aria-labelledby="certificate-title">
+        <div class="certificate-dialog-header">
+          <div>
+            <p class="eyebrow">CERTIFICATION</p>
+            <h2 id="certificate-title">Data Scientist &amp; AI</h2>
+          </div>
+          <button class="icon-button" type="button" aria-label="Close certification" @click="closeCertificate">
+            <X :size="20" />
+          </button>
+        </div>
+        <p class="certificate-description">
+          View the Data Scientist &amp; AI certification.
+        </p>
+        <iframe
+          class="certificate-viewer"
+          src="/certifications/data-scientist-ai.pdf"
+          title="Data Scientist &amp; AI certificate PDF"
+        ></iframe>
+        <a
+          class="certificate-pdf-link"
+          href="/certifications/data-scientist-ai.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open certificate PDF <ArrowUpRight :size="16" />
+        </a>
+      </dialog>
+
       <section id="about" class="about-section">
         <div class="about-inner section-wrap">
           <div class="about-intro">
@@ -207,10 +296,10 @@ function closeMenu() {
             <h2>Better questions.<br />Better <span class="heading-accent">software.</span></h2>
           </div>
           <div class="about-content">
-            <p class="about-lead">I’m Riyo Maryadi. I enjoy the in-between part of making things: the experimenting, the rabbit holes, and the satisfying moment it finally clicks.</p>
-            <p class="about-secondary">Right now, that curiosity takes me through Linux, Java, and the web. The projects here are snapshots of what I’m learning and what I’m building; there’s always something new around the corner.</p>
+            <p class="about-lead">I’m Riyo Maryadi, a developer exploring data science, full-stack web development, networking, and mobile applications.</p>
+            <p class="about-secondary">I bring curiosity and a practical, project-led approach to solving problems—from machine-learning experiments and responsive web experiences to OpenWrt networking tools and media-tracking software. I’m looking for opportunities to keep learning while contributing thoughtful, useful work.</p>
             <div class="interest-list" aria-label="Technologies and interests">
-              <span>Linux</span><span>Java</span><span>Vue</span><span>Laravel</span><span>Open source</span>
+              <span>Python</span><span>Vue</span><span>React</span><span>Angular</span><span>OpenWrt</span><span>Java</span>
             </div>
           </div>
         </div>
