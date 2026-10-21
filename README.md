@@ -14,7 +14,7 @@ I build practical software across machine learning, modern web applications, net
 [Source repository](https://github.com/riyoMar/ml-heart-attack-classification) · [Data Scientist & AI certification](https://riyomar.github.io/certifications/data-scientist-ai.pdf)
 
 ### Full-Stack Developer
-- [Vue — complex_website](https://github.com/riyoMar/complex_website)
+- [Vue — laravel-intertia-vue](https://github.com/riyoMar/laravel-intertia-vue) — a single-page application (SPA) built with Laravel, Inertia.js, and Vue.
 - [React — react-profile](https://github.com/riyoMar/react-profile)
 - [Angular — angular-profile](https://github.com/riyoMar/angular-profile)
 
