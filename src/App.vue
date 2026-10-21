@@ -32,21 +32,21 @@ const projects = [
   },
   {
     number: '03',
-    name: 'react-profile',
+    name: 'React',
     category: 'FULL-STACK DEVELOPER · REACT',
     description: 'A React portfolio project focused on reusable UI, clear content hierarchy, and a polished responsive experience.',
     language: 'React',
-    url: 'https://github.com/riyoMar/react-profile',
+    url: 'https://riyomar.github.io/react-profile',
     theme: 'project-pink',
     visual: 'website',
   },
   {
     number: '04',
-    name: 'angular-profile',
+    name: 'Angular',
     category: 'FULL-STACK DEVELOPER · ANGULAR',
     description: 'An Angular portfolio project showcasing component-driven development and a considered, responsive interface.',
     language: 'Angular',
-    url: 'https://github.com/riyoMar/angular-profile',
+    url: 'https://riyomar.github.io/angular-profile',
     theme: 'project-blue',
     visual: 'website',
   },
@@ -201,7 +201,7 @@ function closeCertificate() {
               :href="project.url"
               target="_blank"
               rel="noreferrer"
-              :aria-label="`Explore ${project.name} on GitHub`"
+              :aria-label="`Explore ${project.name}`"
             >
               <template v-if="project.visual === 'qdisc'">
                 <span class="art-label">PACKET FLOW<br />STUDY NO. 01</span>
@@ -252,7 +252,7 @@ function closeCertificate() {
               </div>
               <div class="project-meta">
                 <span class="language-tag"><span class="language-dot" :class="`language-${project.language.toLowerCase()}`"></span>{{ project.language }}</span>
-                <a class="project-link" :href="project.url" target="_blank" rel="noreferrer" :aria-label="`View ${project.name} on GitHub`">
+                <a class="project-link" :href="project.url" target="_blank" rel="noreferrer" :aria-label="`View ${project.name}`">
                   <ArrowUpRight :size="19" />
                 </a>
               </div>
