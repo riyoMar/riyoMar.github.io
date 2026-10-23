@@ -9,12 +9,12 @@ I build practical software across machine learning, modern web applications, net
 ## Selected work
 
 ### Data Scientist & AI
-[Heart Disease Risk Classification](https://heart-disease-risk-classification.streamlit.app/) — an interactive machine-learning application for heart disease risk classification.
+[Heart Disease Risk Detection](https://heart-disease-risk-classification.streamlit.app/) — an interactive machine-learning application for heart disease risk classification.
 
 [Source repository](https://github.com/riyoMar/ml-heart-attack-classification) · [Data Scientist & AI certification](https://riyomar.github.io/certifications/data-scientist-ai.pdf)
 
 ### Full-Stack Developer
-- [Vue — laravel-intertia-vue](https://github.com/riyoMar/laravel-intertia-vue) — a single-page application (SPA) built with Laravel, Inertia.js, and Vue.
+- [Vue — Kopi Tubruk](https://github.com/riyoMar/laravel-intertia-vue) — a single-page application (SPA) built with Laravel, Inertia.js, and Vue.
 - [React — react-profile](https://github.com/riyoMar/react-profile)
 - [Angular — angular-profile](https://github.com/riyoMar/angular-profile)
 

@@ -11,9 +11,9 @@ const navigation = [
 const projects = [
   {
     number: '01',
-    name: 'ml-heart-attack-classification',
+    name: 'Heart Disease Risk Detection',
     category: 'DATA SCIENTIST & AI',
-    description: 'Applying machine learning to health data to classify heart-attack risk and communicate insights from the model.',
+    description: 'Applying machine learning to health data to classify heart attack risk and communicate insights from the model.',
     language: 'Python',
     url: 'https://heart-disease-risk-classification.streamlit.app/',
     theme: 'project-lime',
@@ -22,7 +22,7 @@ const projects = [
   },
   {
     number: '02',
-    name: 'laravel-intertia-vue',
+    name: 'Kopi Tubruk',
     category: 'FULL-STACK DEVELOPER · VUE',
     description: 'A Laravel, Inertia.js, and Vue single-page application (SPA) combining server-side routing with a smooth, app-like user experience.',
     language: 'Vue',
@@ -44,7 +44,7 @@ const projects = [
     number: '04',
     name: 'Angular',
     category: 'FULL-STACK DEVELOPER · ANGULAR',
-    description: 'An Angular portfolio project showcasing component-driven development and a considered, responsive interface.',
+    description: 'An Angular portfolio project showcasing component driven development and a considered, responsive interface.',
     language: 'Angular',
     url: 'https://riyomar.github.io/angular-profile',
     theme: 'project-blue',
@@ -64,7 +64,7 @@ const projects = [
     number: '06',
     name: 'MTVTracker',
     category: 'MOBILE DEVELOPER · JAVA',
-    description: 'A media-tracking project for organizing movies and television, with a focus on a practical, user-friendly experience.',
+    description: 'A media tracking project for organizing movies and television, with a focus on a practical, user-friendly experience.',
     language: 'Java',
     url: 'https://github.com/riyoMar/MTVTracker',
     theme: 'project-pink',
@@ -84,7 +84,10 @@ function closeMenu() {
   open.value = false
 }
 
-function openCertificate() {
+function openCertificate(event) {
+  if (window.matchMedia('(max-width: 560px)').matches) return
+
+  event.preventDefault()
   certificateDialog.value?.showModal()
 }
 
@@ -160,14 +163,13 @@ function closeCertificate() {
             <div class="portrait-backdrop"></div>
             <img
               class="portrait"
-              src="https://github.com/riyoMar.png?size=640"
-              alt="Riyo Maryadi's GitHub profile avatar"
+              src="/my-image.jpg"
+              alt="Riyo Maryadi portrait"
               fetchpriority="high"
             />
             <span class="orbit orbit-one"></span>
             <span class="orbit orbit-two"></span>
             <span class="portrait-caption">A PERSON<br />BEHIND THE PROJECTS.</span>
-            <span class="portrait-sticker" aria-hidden="true">MAKE<br />IT WORK<span>✳</span></span>
           </div>
           <div class="art-bottomline"><span>THOUGHTFUL BY NATURE.</span><span>✳</span></div>
         </div>
@@ -240,15 +242,17 @@ function closeCertificate() {
                 <span class="project-category">{{ project.category }}</span>
                 <h3>{{ project.name }}</h3>
                 <p class="project-description">{{ project.description }}</p>
-                <button
+                <a
                   v-if="project.certification"
                   class="certificate-trigger"
-                  type="button"
+                  href="/certifications/data-scientist-ai.pdf"
+                  target="_blank"
+                  rel="noreferrer"
                   @click="openCertificate"
                 >
                   <FileText :size="14" />
                   View Data Scientist &amp; AI certification
-                </button>
+                </a>
               </div>
               <div class="project-meta">
                 <span class="language-tag"><span class="language-dot" :class="`language-${project.language.toLowerCase()}`"></span>{{ project.language }}</span>
@@ -297,7 +301,7 @@ function closeCertificate() {
           </div>
           <div class="about-content">
             <p class="about-lead">I’m Riyo Maryadi, a developer exploring data science, full-stack web development, networking, and mobile applications.</p>
-            <p class="about-secondary">I bring curiosity and a practical, project-led approach to solving problems—from machine-learning experiments and responsive web experiences to OpenWrt networking tools and media-tracking software. I’m looking for opportunities to keep learning while contributing thoughtful, useful work.</p>
+            <p class="about-secondary">I bring curiosity and a practical, project led approach to solving problems from machine learning experiments and responsive web experiences to OpenWrt networking tools and media tracking software. I’m looking for opportunities to keep learning while contributing thoughtful, useful work.</p>
             <div class="interest-list" aria-label="Technologies and interests">
               <span>Python</span><span>Vue</span><span>React</span><span>Angular</span><span>OpenWrt</span><span>Java</span>
             </div>

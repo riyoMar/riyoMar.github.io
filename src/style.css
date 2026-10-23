@@ -402,33 +402,6 @@ a:focus:not(:focus-visible) {
   line-height: 1.7;
 }
 
-.portrait-sticker {
-  position: absolute;
-  top: 16%;
-  right: -17px;
-  display: grid;
-  width: 88px;
-  height: 88px;
-  place-content: center;
-  transform: rotate(9deg);
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-  color: var(--ink);
-  background: var(--paper);
-  font-family: var(--mono);
-  font-size: 10px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.portrait-sticker span {
-  position: absolute;
-  top: -6px;
-  right: -1px;
-  color: #91a927;
-  font-size: 22px;
-}
-
 .art-bottomline {
   margin: 12px 0 0;
 }
@@ -1334,21 +1307,8 @@ a:focus:not(:focus-visible) {
     right: 0;
     left: 0;
     width: 100%;
-    height: 83%;
-    object-position: center center;
-  }
-
-  .portrait-sticker {
-    top: 9%;
-    right: -15px;
-    width: 59px;
-    height: 59px;
-    font-size: 8px;
-  }
-
-  .portrait-sticker span {
-    top: -8px;
-    font-size: 16px;
+    height: 100%;
+    object-position: center top;
   }
 
   .portrait-caption {
