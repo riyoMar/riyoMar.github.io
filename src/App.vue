@@ -75,6 +75,7 @@ const projects = [
 const open = ref(false)
 const dark = ref(false)
 const certificateDialog = ref(null)
+const certificateRequested = ref(false)
 
 onMounted(() => {
   dark.value = window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -88,6 +89,7 @@ function openCertificate(event) {
   if (window.matchMedia('(max-width: 560px)').matches) return
 
   event.preventDefault()
+  certificateRequested.value = true
   certificateDialog.value?.showModal()
 }
 
@@ -279,6 +281,7 @@ function closeCertificate() {
           View the Data Scientist &amp; AI certification.
         </p>
         <iframe
+          v-if="certificateRequested"
           class="certificate-viewer"
           src="/certifications/data-scientist-ai.pdf"
           title="Data Scientist &amp; AI certificate PDF"
